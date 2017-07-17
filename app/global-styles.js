@@ -16,10 +16,13 @@ injectGlobal`
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
-  #app {
+  #app { 
     background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+  }
+
+  #app>div, #app>div>.grid {
+    height: 100%;
   }
 
   p,

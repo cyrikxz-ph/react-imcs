@@ -10,15 +10,45 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+// import { FormattedMessage } from 'react-intl';
+// import messages from './messages';
+import { makeSelectSessionToken } from '../App/selectors';
+import { checkUserCredentials } from './actions';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+
   render() {
     return (
       <h1>
-        <FormattedMessage {...messages.header} />
+        HOME
       </h1>
     );
   }
 }
+
+// HomePage.propTypes = {
+//   token: PropTypes.string,
+//   checkUserCredentials: PropTypes.func,
+// };
+
+
+// const mapStateToProps = createStructuredSelector({
+//   token: makeSelectSessionToken(),
+// });
+
+
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     dispatch,
+//   };
+// }
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps,
+// )(HomePage);
+
+export default HomePage;
